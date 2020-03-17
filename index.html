@@ -1,0 +1,49 @@
+<!--
+<?php
+session_start();
+if (isset($_SESSION['message'])) {
+	$message = $_SESSION['message'];
+}
+else {
+	$quotes = file_get_contents('quotes.json');
+	$quotes = json_decode($quotes,true)['quotes'];
+	$key = array_rand($quotes, 1);
+
+	$message = $quotes[$key];	
+	$_SESSION['message'] = $message;
+}
+?>
+-->
+<html>
+	<head>
+		<title>Vanillo is down…</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+<body>
+	<div class="position">
+		<div class="notification">
+			<div class="element">
+				<div>
+					<img src="assets/vanillo.png">
+				</div>
+			</div>
+			
+			<div class="split">
+				<h1><!--<?php echo $message; ?>-->OwO I did a fucky wucky</h1><p>Check out our new project <a href="https://watchneptune.tv">Neptune</a>. Alternatively, click <a id="jazzButton">here to start Smooth Jazz.</a> (Only OGs will remember this.)
+			</div>
+			<div class="element-f">
+				<div>
+					<p>CosmicMedia LLC. <!--<?php echo date("Y"); ?>--></p>
+				</div>
+				<div style="text-align:right;">
+				    <a href="https://twitter.com/VanilloPR"><img src="assets/twitter.png"></a><a href="https://discord.gg/PbtrJzF"><img src="assets/discord.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="jazzBox.js"></script>
+	<script>
+		jazzBoxStopMessage("here to stop Smooth Jazz.");
+	</script>
+</body>
+</html>
