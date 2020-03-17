@@ -6,7 +6,7 @@ body {
 	padding:0;
 	margin:0;
 	overflow:hidden;
-	background-image: linear-gradient(#FEC995,#FFA656);
+	background-image: linear-gradient(#FEC995,#FFA656) !important;
 	height:100%;
 	width:100%;
 	font-family: Gilroy, sans-serif;
