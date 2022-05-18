@@ -1,28 +1,68 @@
-<html style="height:100vh">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanillo</title>
-    <meta name="description" content="Watch this.">
-    
-   </head>
-<body style="height: 100%;margin: 0;">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-        body {
-            background-color: #eb9d5b;
-            font-family: 'Inter', sans-serif;
-            color: #fbf2e9;
-        }
-        h1 {
-            font-size: 48px;
-            margin-left: 16px;
-            letter-spacing: -2%;
-        }
-    </style>
-    <div style="display:flex;flex-direction:row;justify-content: center;align-items: center;height: 100%;">
-        <a href="https://twitter.com/VanilloPR"> <img src="vanillo.svg" alt="Vanillo Logo" style="width:100px;"> </a>
-    </div>
- </body>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Vanillo Parable</title>
+	
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/modal.css">
+</head>
+<body>
+	<div id="app">
+		<p class="playing">You are playing</p>
+		<h1 class="game-title" ondblclick="window.location.href = 'https://store.steampowered.com/app/1703340/The_Stanley_Parable_Ultra_Deluxe/'">THE VANILLO PARABLE</h1>
+	</div>
+	
+	<div class="buttons">
+		<div class="button" id="play-button">
+			<h1 class="button-name">Begin the game</h1>
+		</div>
+		
+		<div class="button" onclick="window.location.href = 'https://twitter.com/VanilloPR'">
+			<h1 class="button-name">Vanillo on Twitter</h1>
+		</div>
+		
+		<div class="button" id="credits-button">
+			<h1 class="button-name">Credits</h1>
+		</div>
+	</div>
+	
+	<div id="play-modal" class="modal">
+		<div class="modal-content">
+			<span id="play-close" class="close">&times;</span>
+			<p>
+				Vanillo is a video sharing platform that existed in 2019. It is now being revived, better than ever.
+				<br> You can keep up with our constant progress via our Twitter or Discord.
+			</p>
+		</div>
+	</div>
+
+	<div id="credits-modal" class="modal">
+		<div class="modal-content">
+			<span id="credits-close" class="close">&times;</span>
+			<p>
+				<strong>Vanillo Staff</strong>
+				<br>
+				
+				Vanillo is developed by 
+				<a class="social-link" href="https://twitter.com/BlakeB415">BlakeB415</a>, 
+				<a class="social-link" href="https://twitter.com/kenhydrogen">Hydrogen</a>,
+				<a class="social-link" href="https://twitter.com/michaelwebbtrm">Micheal / TheRandomMelon</a>,
+				Kyle,
+				<a class="social-link" href="https://twitter.com/wakkoworld">Aaron</a>,
+				<a class="social-link" href="https://twitter.com/burialposter">Ellie</a>.
+
+				<br>
+				<br>
+
+				<small>Coming Soon page (the one you're looking at) made by Hydrogen</small>
+			</p>
+		</div>
+	</div>
+	
+	<script src="/js/credits.js"></script>
+	<script src="/js/play.js"></script>
+</body>
 </html>
