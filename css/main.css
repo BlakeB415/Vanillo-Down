@@ -1,17 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
 
 body {
-    background: url('/img/background.jpg');
-    font-family: 'League Gothic', sans-serif;
-
-    min-height: 100vh;
-    max-height: 100vh;
-
-    height: 100vh;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    font-family: 'Inter', sans-serif;
 
     overflow-y: hidden !important;
 
@@ -23,56 +13,63 @@ body {
     margin: 40px;
 }
 
-.game-title {
-    color: white;
-    font-size: 100px;
-    font-weight: normal;
+.screenshot {
+    width: 50vw;
+    transform: translateY(-45px);
+
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.playing {
-    color: white;
-    font-size: 40px;
+.wordmark {
+    width: 20vh;
+}
+
+.center {
+    display: flex;
+
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.text {
+    margin-top: 30px;
+}
+
+p {
+    font-size: 22px;
+    color: #ED9F5A;
+}
+
+.min-container {
+    margin: 15px;
+}
+
+a {
+    all: unset;
+
+    cursor: pointer;
+    text-emphasis: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .screenshot {
+        margin-top: 20vh;
+
+        width: 95vw;
+        transform: translateY(-15px) !important;
     
-    transform: translateY(70px);
-}
+        border-radius: 10px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
 
-.buttons {
-    margin-top: 16%;
-}
+    .wordmark {
+        width: 15vh;
+    }
 
-.button {
-    font-weight: normal;
-    font-size: 25px;
-    color: white;
-
-    width: 300px;
-
-    padding: 0;
-
-    margin-bottom: 0;
-    margin-top: 5px;
-
-    transition-duration: 200ms;
-}
-
-.button:hover {
-    color: black;
-    background: #f6cf01;
-
-    transition-duration: 200ms;
-    cursor: default;
-}
-
-.button-name {
-    margin-left: 40px;
-}
-
-.social-link {
-    color: gray;
-    transition-duration: 200ms;
-}
-
-.social-link:hover {
-    color: #eb9d5b;
-    transition-duration: 200ms;
+    p {
+        font-size: 18px;
+        color: #ED9F5A;
+    }
 }
